@@ -2,6 +2,7 @@ $(document).on('ready', function() {
   $('.signin').on('click', fadeIn)
   $('.close').on('click', fadeOut)
   $('.submit').on('click', errorMsg)
+  $('input').on('mouseover', removeErrorMsg)
 });
 
 function fadeOut(){
@@ -16,4 +17,8 @@ function fadeIn() {
 
 function errorMsg() {
   $('input').addClass('.error')
+};
+
+function removeErrorMsg() {
+  $('input').removeClass('.error')
 };
